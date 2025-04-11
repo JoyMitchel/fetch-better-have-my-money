@@ -11,6 +11,26 @@ function fetchTasks() {
         }
         
         return res.json(); 
-    }).then ((todos) => console.log(todos)
+    }).then ((todos) => {
+      renderTodos(todos)  
+    }
     )
 } 
+
+function renderTodos(todos) {
+    
+    todos.forEach (todo => {
+        const todoElement = document.createElement ('div');
+
+        todoElement.className = 'task';
+
+        const checkbox = document.createElement ('input');
+
+        const todoText = document.createElement ('span');
+
+        const deleteButton = document.createElement('button');
+        deleteButton.innerHTML = '<i class="fa-solid fa-trash"></i>';
+
+        
+    })
+}
